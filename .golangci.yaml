@@ -100,3 +100,9 @@ linters:
     - whitespace
     - wrapcheck
     - zerologlint
+issues:
+  exclude-rules:
+    - path: cmd/shamir-example/main.go
+      linters:
+        - forbidigo
+        - gomnd
