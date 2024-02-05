@@ -32,6 +32,14 @@ import (
 	"errors"
 )
 
+type Shamir struct {
+	ResultIndex  uint8
+	ShareIndices []uint8
+	ShareValues  [][]uint8
+	ShareCount   uint8
+	Length       uint8
+}
+
 var ErrInterpolateFailed = errors.New("interpolate failed")
 
 // Interpolate computes f(x) given the Shamir shares (x_1, f(x_1)), ... , (x_m, f(x_m)).
